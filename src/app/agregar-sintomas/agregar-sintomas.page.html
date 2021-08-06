@@ -1,0 +1,31 @@
+<ion-header [translucent]="true" color="primary">
+  <ion-toolbar color="primary">
+    <ion-title>Describa sus sintomas</ion-title>
+    <ion-button color="primary"slot="start">
+ 
+       <ion-back-button defauldHref="/home">
+        
+ 
+       </ion-back-button>
+     </ion-button> 
+ 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" style="--background:linear-gradient(white,#F9D387);color: black;">
+  
+  <ion-item>
+    <ion-label position="floating">Sintomas</ion-label>
+    <ion-input [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">temperatura</ion-label>
+    <ion-input [(ngModel)]="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-button *ngIf="contactId==undefined"  (click)="save()"  color="danger">Guardar</ion-button>
+    <ion-button *ngIf="contactId!=undefined"  (click)="update()"  color="danger">Actualizar</ion-button>
+  </ion-item>
+
+  
+</ion-content>

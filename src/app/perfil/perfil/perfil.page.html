@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>Perfil</ion-title>
+    <ion-icon  id="cerrar"(click)="goAu()" slot="end" name="power"></ion-icon>
+ 
+
+   
+  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="content">
+  <h3  id="nom">LUIS ANGEL VASQUEZ ORTIZ </h3>
+  <ion-avatar id="avatar">
+    <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6zes53m4a_2VLTcmTn_bHk8NO5SkuWfcQbg&usqp=CAU">
+  </ion-avatar>
+  
+  <ion-chip id="chip">
+    <ion-avatar>
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-avatar>
+    <ion-label id ="nom2">Beneficiario</ion-label>
+    
+  </ion-chip>
+  <h3 id="cc"> C.C:1035897</h3>
+
+  <ion-card-content>
+
+    <section>
+   
+   
+      <ion-button (click)=" goAdmi()" class="boton"color="success" expand="block">Proceso administrativo</ion-button>
+    </section>
+    <section>
+      
+      <ion-button (click)="GOper()" class="boton" color="secondary" expand="block">Proceso perioperatorio</ion-button>
+    </section>
+    <section>
+    
+      <ion-button (click)="goReport()"  class="boton" color="primary" expand="block">Reporte de sintomas</ion-button>
+    </section>
+  
+  </ion-card-content>
+  
+
+
+</ion-content>

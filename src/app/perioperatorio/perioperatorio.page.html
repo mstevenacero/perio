@@ -1,0 +1,185 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>Proceso Perioperatorio</ion-title>
+    <ion-button color="secondary"slot="start">
+
+      <ion-back-button defauldHref="/home">
+       
+
+      </ion-back-button>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="content">
+  <div>
+
+    <img src="../../assets/imagenes/grupo.png" alt="">
+  </div>
+
+  <ion-button (click)="show=!show" class="boton"color="secondary" expand="block">Antes</ion-button>
+  <div class="content1" *ngIf="show">
+
+    <ion-text class ="text1">
+    REUNION CON EL EQUIPO QUIRURGICO:
+      
+
+    
+
+
+    </ion-text>
+    <ion-text class="text2">
+      Antes de la cirugía, usted se reunirá con el cirujano o el equipo quirúrgico.Analizarán su registro médico, realizarán un examen físico y evaluarán la necesidad de cirugía
+    </ion-text>
+     <br>
+    
+    <ion-text class="text1">
+      AUTORIZACION PARA LA CIRUGIA:
+        
+  
+      
+  
+  
+      </ion-text>
+      <br>
+      <ion-text class="text2">
+
+        Es posible que antes de la cirugía necesite ciertas pruebas. Hable con su médico para saber qué pruebas necesitará. A continuación se indican algunos ejemplos.
+
+
+      </ion-text>
+  
+      <br>
+      <ion-text class="text3">
+        PROGRESO:
+      </ion-text>
+       
+      <ion-progress-bar color="success"class="barra" value="1"></ion-progress-bar>
+
+    <img src="../../assets/imagenes/Coronavirus-Graphic.png" alt=""  >
+
+    <ion-button [routerLink]="[ '/Perioperatorio' ]"class="boton"color="success" expand="block"> Mas detalles...</ion-button>
+  </div>
+
+
+
+
+
+
+<!-- despues  durante-----------------------------------------------------------------------------------------------------------------------------------
+.---------------------------->
+
+
+
+   <ion-button (click)="show1=!show1" class="boton"color="secondary" expand="block">Durante</ion-button>
+   <div class="content1" *ngIf="show1">
+ 
+     <ion-text class ="text1">
+    ANESTICIA LOCAL :
+       
+ 
+     
+ 
+ 
+     </ion-text>
+     <ion-text class="text2">
+      La anestesia local es una inyección que adormece el área donde se necesita la cirugía. La anestesia local se usa para procedimientos que se realizan en el consultorio del médico, como la extirpación de un lunar
+     </ion-text>
+      <br>
+     
+     <ion-text class="text1">
+       ANESTECIA GENERAL:
+         
+   
+       
+   
+   
+       </ion-text>
+       <br>
+       <ion-text class="text2">
+ 
+        La anestesia general deja a la persona en un estado de inconsciencia durante un procedimiento mayor. La anestesia general se administra a través de una máscara facial, una aguja intravenosa (i.v.) que se inserta en una vena del brazo o una combinación de ambas. Luego, el anestesista generalmente coloca un tubo en la garganta para ayudar con la respiración, proporcionar oxígeno y, en ocasiones, administrar anestesia. El anestesista controla cuidadosamente la frecuencia cardíaca, la presión arterial y el oxígeno durante la operación. Por lo general, el paciente no está consciente de nada hasta que la anestesia deja de tener efecto después de la operación
+ 
+ 
+       </ion-text>
+   
+       <br>
+       <ion-text class="text3">
+         PROGRESO:
+       </ion-text>
+        
+       <ion-progress-bar color="success"class="barra" value="0.7"></ion-progress-bar>
+ 
+     <img id="imagen"src="../../assets/imagenes/cirugia.png" alt=""  >
+ 
+     <ion-button class="boton"color="success" expand="block"> Mas detalles...</ion-button>
+   </div>
+
+
+<!-- despues  operaacio-----------------------------------------------------------------------------------------------------------------------------------
+.---------------------------->
+
+
+
+
+
+   <ion-button (click)="show2=!show2" class="boton"color="secondary" expand="block">Despues</ion-button>
+   <div class="content1" *ngIf="show2">
+ 
+     <ion-text class ="text1">
+    PROCESO DE RECUPERACION :
+       
+ 
+     
+ 
+ 
+     </ion-text>
+     <ion-text class="text2">
+      Consulte al médico sobre la actividad física después de la cirugía. Es importante que camine en cuanto pueda para favorecer la circulación de la sangre y evitar la formación de coágulos.
+
+
+     </ion-text>
+      <br>
+     
+     
+       <br>
+       <ion-text class="text2">
+ 
+       -  Pida una derivación a un fisioterapeuta, si fuera necesario. La fisioterapia podría ser una parte importante de su recuperación. Puede ayudar a aumentar la fuerza y la flexibilidad, y algunos pacientes pueden comenzar el día siguiente de la cirugía. Es posible que reciba un programa de ejercicios en el hogar, pero es importante que siga las instrucciones específicas del médico y del fisioterapeuta.
+ 
+ 
+       </ion-text>
+   
+       <br>
+       <ion-text class="text2">
+ 
+        - Hable con el personal de enfermería o con el dietista del hospital sobre cuál es la nutrición adecuada y cuándo volver a consumir los alimentos habituales.
+ 
+ 
+       </ion-text>
+        <br>
+       
+       <ion-text class="text3">
+         PROGRESO:
+       </ion-text>
+        
+       <ion-progress-bar color="success"class="barra" value="0.0"></ion-progress-bar>
+ 
+     <img src="../../assets/imagenes/recupe.png" alt="">
+ 
+     <ion-button class="boton"color="success" expand="block"> Mas detalles...</ion-button>
+   </div>
+
+
+
+
+
+
+
+
+
+
+  
+ 
+
+</ion-content>

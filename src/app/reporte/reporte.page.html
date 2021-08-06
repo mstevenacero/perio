@@ -1,0 +1,73 @@
+<ion-header [translucent]="true" color="primary">
+  <ion-toolbar color="primary">
+  
+    <ion-title>Reporte de sintomas</ion-title>
+    <ion-button color="primary"slot="start">
+ 
+       <ion-back-button defauldHref="/home">
+        
+ 
+       </ion-back-button>
+     </ion-button> 
+ 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" id="content">
+  <ion-item  style="    --background:linear-gradient(white,white);color: black;">
+    <img id="imgsin"src="../../assets/imagenes/sinto.png" alt="">
+   
+   
+  </ion-item>
+ 
+  
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+    <ion-list line="none">
+      <ion-item-sliding *ngFor="let contact of contacts">
+        <ion-item-options side="start">
+          <ion-item-option color="warning" [routerLink]="['/agregar-sintomas', contact.key]" ><ion-icon  style="font-size:30px"  name="create-outline"></ion-icon></ion-item-option>
+          
+        </ion-item-options>
+    
+        <ion-item  class="cajas" >
+          <ion-row style="width: 100%;">
+            <ion-col size="2">
+              <ion-avatar>
+                <ion-img src="https://www.cdc.gov/flu/images/symptoms/signs-symptoms.png"></ion-img>
+              </ion-avatar>
+            </ion-col>
+            <ion-col size="8">
+              <ion-label style="margin-left: 16px;" class="ion-text-wrap">
+            
+                <ion-text color="danger">
+                  <h3>{{contact.name}}</h3>
+                </ion-text>
+                <p>{{contact.number}}</p>
+               
+              </ion-label>
+            </ion-col>
+            
+          </ion-row>
+          
+          
+        </ion-item>
+    
+        <ion-item-options side="end">
+          <ion-item-option color="danger" (click)="deleteConfirm(contact.key)"><ion-icon style="font-size:30px" name="trash-outline"></ion-icon></ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+      
+      
+    </ion-list>
+    <ion-fab  vertical="bottom" slot="fixed" horizontal="end">
+
+      <ion-fab-button color="danger" (click)="addSintoma()" >
+        <ion-icon name="add-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+</ion-content>

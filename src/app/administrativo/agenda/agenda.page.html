@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Citas</ion-title>
+    <ion-button color="success"slot="start">
+
+      <ion-back-button defauldHref="/administrativo">
+       
+
+      </ion-back-button>
+    </ion-button> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card-content>
+  
+    <ion-item>
+      
+
+      <img id ="img1"src="../../../assets/imagenes/agenda.png" alt="">
+    </ion-item>
+    
+    <img src="../../../assets/imagenes/familia.png" alt="">
+    <h2 id="titulo">En este apartado podras ver tus citas la fecha y hora</h2>
+    <p>Eres importante para nosotros, por eso traemos una serie de servicios diseñados para cubrir tus necesidades y las de tu familia, te invitamos a conocerlos para que empieces a disfrutarlos</p>
+    <ion-button  (click)="show=!show" shape="round" expand="block" color="success"  >Ver calendario</ion-button>
+  </ion-card-content>
+  
+ 
+  
+  <ion-card-content *ngIf="show">
+    <ion-item>
+
+             
+      <ion-label position="floating">tipo</ion-label>
+      <ion-input [(ngModel)]="monEvent.title"></ion-input>
+    
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">descripcion</ion-label>
+      <ion-textarea></ion-textarea>
+    </ion-item>
+
+ 
+<ion-item>
+
+
+  <ion-label position="floating">fecha de cita</ion-label>
+  <ion-datetime [(ngModel)]="monEvent.dayEvent" displayFormat="DD/MM/YYYY HH:mm" pickerFormat="MMMM DD:HH:mm"></ion-datetime>
+</ion-item>
+
+  <ion-button  shape="round" expand="block" color="success" (click)="agregar()" >Agendar Cita</ion-button>
+  <ion-row>
+    <!-- slides antes -->
+    <ion-col size="2">
+      <ion-button fill="clear" (click)="back()">
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+  
+    <ion-col size="8" class="ion-text-center">
+      <h2>{{ viewTitle }}</h2>
+    </ion-col>
+  
+    <!-- slides despúes  -->
+    <ion-col size="2">
+      <ion-button fill="clear" (click)="next()">
+        <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <calendar 
+   
+  [calendarMode]="calendar.mode" 
+  [currentDate]="calendar.currentDate"
+  (onTitleChanged)="onViewTitleChanged($event)"
+  [eventSource]="eventSource"
+  >
+  
+  </calendar>
+</ion-card-content>
+
+
+</ion-content>
